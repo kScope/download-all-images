@@ -1,0 +1,27 @@
+{
+	"manifest_version": 2,
+
+	"name": "Download all images",
+	"description": "Sample extension that will download every image in a web page",
+	"version": "1.0",
+	"background": {
+		"scripts": ["background.js"]
+	},
+    "content_scripts": [{
+        "css": [
+            "style.css"
+        ],
+        "js": [
+            "external-library.js"
+        ],
+        "matches": ["*://*/*"]
+    }],
+    "permissions": [
+        "tabs",
+        "activeTab" 
+    ],
+	"browser_action": {
+		"default_icon": "icon.png",
+		"default_title": "Download all images"
+    }
+}
